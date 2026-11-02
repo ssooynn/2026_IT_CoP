@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>심사위원 평가</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container wide">
+    <div class="card topbar">
+      <div>
+        <h1>심사위원 평가</h1>
+        <div id="judge-info" class="subtle"></div>
+      </div>
+      <div class="actions">
+        <button id="save-draft-btn" type="button" class="secondary">임시저장</button>
+        <button id="submit-final-btn" type="button">최종 제출</button>
+        <button id="logout-btn" type="button" class="danger">로그아웃</button>
+      </div>
+    </div>
+
+    <div class="card status-card">
+      <div><strong>상태:</strong> <span id="form-status">불러오는 중...</span></div>
+      <div><strong>마지막 저장:</strong> <span id="last-saved">-</span></div>
+      <div><strong>입력 진행률:</strong> <span id="progress-text">0 / 48</span></div>
+    </div>
+
+    <div class="card">
+      <h2>배점 기준</h2>
+      <div class="criteria-grid" id="criteria-guide"></div>
+    </div>
+
+    <div id="teams-container"></div>
+  </div>
+
+  <script type="module" src="js/judge.js"></script>
+</body>
+</html>
